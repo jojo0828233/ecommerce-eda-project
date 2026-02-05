@@ -1,174 +1,39 @@
+# 电商平台用户行为与收入特征分析（EDA）
 
-<div align="center">
-  <img src="images/cover_image.jpeg" alt="E-Commerce Data Analysis Project Banner" width="100%">
-</div>
-<br>
-A collaborative Ideathon project exploring real-world user behaviour, sales patterns, and insights from an e-commerce dataset.
-<br></br>
+## 一、项目背景
+在数字经济背景下，电商平台作为典型的平台经济组织形式，在资源配置、用户匹配和消费行为塑造中发挥着重要作用。
+本项目基于公开的电商平台用户与交易数据，从平台经济视角出发，对不同用户群体的消费行为和收入贡献进行探索性分析（EDA），以加深对平台用户结构与运行机制的理解。
+本项目是在本人准备数字经济专业硕士复试过程中完成的，用于提升对平台经济数据分析的理解。
 
-<div align="center">
+## 二、数据来源
+项目使用的为公开电商平台数据集，包含以下主要信息：
+- 用户特征：年龄、性别、国家
+- 平台访问行为：访问时间、访问时长、浏览器类型
+- 交易信息：销售额（Revenue）、支付方式等
 
-![Python](https://img.shields.io/badge/python-3.10%2B-2a52be?style=for-the-badge&logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-c75c00?style=for-the-badge&logo=Jupyter)
-![Git](https://img.shields.io/badge/GIT-Workflow-f05032?style=for-the-badge&logo=git&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge)
-![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-311b92.svg?style=for-the-badge)
-![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)
+数据文件：`E-commerce_dataset.csv`
 
+## 三、分析方法
+本项目采用 Python 进行数据分析与可视化，主要使用的工具包括：
+- pandas：数据清洗与分组统计
+- matplotlib：数据可视化
 
-</div>
+分析方法以描述性统计和分组对比分析为主，重点关注不同用户群体在平台上的行为差异。
 
+## 四、主要分析结果
 
-##  Overview
+### 1. 不同年龄段用户的收入贡献
+通过对用户按年龄分组并统计平台总收入，可以观察到不同年龄段用户对平台收入的贡献存在明显差异。
+分析结果显示，中高年龄段用户贡献了更高的总收入，说明该群体具有更强的消费能力和相对稳定的消费行为，而年轻用户的整体收入贡献相对较低。
 
-This repository contains a team-based exploratory data analysis (EDA) project developed as part of our Ideathon participation.
+这一结果体现了平台经济中用户分层特征，对平台制定差异化运营和服务策略具有一定参考价值。
 
-Our goal is to:
+## 五、结论与启示
+通过本次探索性数据分析，可以得到以下启示：
+1. 电商平台用户在消费能力和行为模式上存在显著差异。
+2. 中高年龄用户是平台收入的重要来源，应作为平台重点服务和维护的核心群体。
+3. 平台可针对不同用户群体制定差异化的运营策略，以提升整体效率和用户体验。
 
-> Analyze an e-commerce dataset, uncover patterns, visualize insights, and collaboratively build a clean analytical portfolio using Git, GitHub workflows, and Jupyter Notebooks.
-
-
-
-Each team member contributes individual analyses through feature branches and pull requests, ensuring a professional and conflict-free workflow.
-
----
-
-##  Dataset Description
-
-The dataset consists of multiple features representing real user activity on an e-commerce platform. Below are the key attributes:
-
-| Feature | Description |
-| :--- | :--- |
-| **AccessDate** | Date & time when the user accessed the website |
-| **DurationSeconds** | Total time spent on the platform |
-| **NetworkProtocol** | Indicates whether the user accessed via HTTP/HTTPS |
-| **IPAddress** | Masked IP region of the user |
-| **BytesConsumed** | Total data consumed during the session |
-| **Browser** | Browser used (Chrome, Firefox, Safari, etc.) |
-| **Age** | Age of the user |
-| **Gender** | Gender information |
-| **Country** | Location of the user |
-| **Membership** | Normal or Premium membership type |
-| **Language** | Website language selected |
-| **Sales** | Sales amount generated |
-| **Returned** | Whether a product return took place |
-| **ReturnedAmount** | Amount refunded for returns |
-| **PaymentMethod** | Mode of payment (UPI, Card, COD, etc.) |
-
-This structured dataset allows for meaningful segmentation, behavioural analysis, and performance insights.
-
----
-
-##  Objectives
-
-* Clean and preprocess the dataset
-* Identify behavioural & demographic trends
-* Visualize patterns using effective plots
-* Understand the business impact of attributes (age, country, browser, etc.)
-* Perform comparative analysis across different user groups
-* Build a high-quality, structured, collaborative data-science repository
-* Showcase teamwork, analysis skills, and Git/GitHub workflow mastery
-
----
-##  Tech Stack
-
-<p align="center">
-  <a href="https://www.python.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40" style="margin: 0 10px;"/>
-  </a>
-  
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40" style="margin: 0 10px;"/>
-  </a>
-  
-  <a href="https://matplotlib.org/" target="_blank" rel="noreferrer">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="matplotlib" width="40" height="40" style="margin: 0 10px;"/>
-  </a>
-  
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40" style="margin: 0 10px;"/>
-  </a>
-  
-  <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="vscode" width="40" height="40" style="margin: 0 10px;"/>
-  </a>
-  
-</p>
-
----
-
-##  Example Analyses Performed
-
-This repository includes multiple analyses by different contributors, such as:
-
-* Browser-wise Sales Contribution
-* Country-wise Sales Performance
-* Age Group vs Purchase Behaviour
-* Membership Type vs Average Sales
-* Return Behaviour Patterns
-* Payment Method Preferences
-* Duration vs Sales Relationship
-
-<p align="center">
-  <img src="images/age-bar.png" width="45%">
-  <img src="images/heat_map.png" width="40%">
-</p>
-<p align="center">
-  <img src="images/pie_output.png" width="38%">
-  <img src="images/pay_bar.png" width="48%">
-</p>
-
-*Team members may include plot images directly inside their Jupyter notebooks for clarity.*
-
----
-
-
-
-## 🛡 License
-
-This project is licensed under the MIT License.
-See the [LICENSE](LICENSE) file for details.
-
----
-
-##  Discussions
-
-We use GitHub Discussions to:
-
-* Ask questions
-* Share plot ideas
-* Seek help with Git, VS Code, or Python
-* Suggest improvements
-* Collaborate openly
-
-Everyone is encouraged to participate.
-
----
-
-##  Team
-
-This project is collaboratively maintained by a 5-member team as part of our Ideathon initiative.
-Each member contributes uniquely through independent analyses and insights.
-
-<a href="https://github.com/Amal-nellanhi/ecommerce-eda-project/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Amal-nellanhi/ecommerce-eda-project" />
-</a>
-
----
-
-##  Why This Project Matters
-
-This repository is a demonstration of:
-
-* Analytical thinking
-* Team collaboration
-* Coding workflows
-* Real-world data handling
-* Structured EDA practices
-* Professional GitHub project management
-
-It showcases our ability to work like a real data analysis team while exploring meaningful e-commerce insights.
-
----
-
-<h2 align = 'center'> <i>Visualize the invisible ✨✨</i></h2>
+## 六、项目说明
+- 本项目为探索性数据分析（EDA），重点在于分析思路和经济含义的理解。
+- 后续可进一步结合时间维度或引入人均消费指标，对用户行为进行更深入研究。
